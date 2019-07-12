@@ -1,0 +1,11 @@
+$baseFontSize: 38px; // pc 以 w: 1920px, f: 38px布局
+$MbaseFontSize: 16px; // mobile 以 w: 375px, f: 16px布局
+
+$pageMinWidth: 1200px;  // pc页面最小宽度
+
+@function pxTorem($px) {    // px -> rem
+    @return $px / $baseFontSize * 1rem;
+}
+@function MpxTorem($px) {
+    @return $px / $MbaseFontSize * 1rem;
+}

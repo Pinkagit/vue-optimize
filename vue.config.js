@@ -34,6 +34,13 @@ const externals = {
 const productionGzip = false;
 
 module.exports = {
+    css: {
+        loaderOptions: {
+            sass: {
+                data: `@import "@/assets/scss/variables.scss";`     // 全局scss
+            }
+        }
+    },
     configureWebpack: config => {
         let myConfig = {}
         if (process.env.NODE_ENV === 'production') {
