@@ -1,4 +1,5 @@
 console.log('env ==========>', process.env.NODE_ENV)
+console.log('host ==========>', process.env.VUE_APP_HOST)
 
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
