@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
-import axios from 'axios'
+import store from './store/index.js'
+import axios from './plugins/axios.js'
 import VueAxios from 'vue-axios'
 
 import "./assets/scss/reset.scss";		// 引入全局重置样式
