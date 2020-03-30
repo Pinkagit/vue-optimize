@@ -1,11 +1,21 @@
+/* --- 该处参数默认不需要更改 --- */
 $baseFontSize: 38px; // pc 以 w: 1920px, f: 38px布局
+$baseWidth: 1920px;
 $MbaseFontSize: 16px; // mobile 以 w: 375px, f: 16px布局
+$MbaseWidth: 375px;
 
 $pageMinWidth: 1200px;  // pc页面最小宽度
 
+/* --- 按实际设计稿宽度更改 --- */
+$designWidthPc: 1920px;     // pc设计稿宽度
+$designWidthMobile: 750px;  // mobile设计稿宽度
+
+$FontSize: 38px * ($designWidthPc / 1920px);    // pc相应设计稿宽度下的 fontSize
+$MFontSize: 16px * ($designWidthMobile / 375px);    // mobile相应设计稿宽度下的 fontSize
+
 @function pxTorem($px) {    // px -> rem
-    @return $px / $baseFontSize * 1rem;
+    @return $px / $FontSize * 1rem;
 }
 @function MpxTorem($px) {
-    @return $px / $MbaseFontSize * 1rem;
+    @return $px / $MFontSize * 1rem;
 }
