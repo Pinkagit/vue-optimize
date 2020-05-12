@@ -1,5 +1,5 @@
 console.log('env ==========>', process.env.NODE_ENV)
-console.log('host ==========>', process.env.VUE_APP_HOST)
+console.log('app_env ==========>', process.env.VUE_APP_ENV)
 
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
@@ -42,6 +42,18 @@ module.exports = {
             }
         }
     },
+    /* devServer: {
+        proxy: {
+            '/': {
+                target: 'http://127.0.0.1:3005',
+                changOrigin: true, // 开启代理
+                ws: false,
+                pathRewrite: {
+                    '^/': '/'
+                }
+            }
+        }
+    }, */
     configureWebpack: config => {
         let myConfig = {}
         if (process.env.NODE_ENV === 'production') {

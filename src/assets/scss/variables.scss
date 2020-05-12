@@ -1,7 +1,7 @@
 /* --- 该处参数默认不需要更改 --- */
 $baseFontSize: 40px; // pc 以 w: 1920px, f: 38px布局
 $baseWidth: 1920px;
-$MbaseFontSize: 32px; // mobile 以 w: 375px, f: 32px(16px*2)布局
+$MbaseFontSize: 16px; // mobile 以 w: 375px, f: 16px布局
 $MbaseWidth: 375px;
 
 $pageMinWidth: 1200px;  // pc页面最小宽度
@@ -18,4 +18,13 @@ $MFontSize: $MbaseFontSize * ($designWidthMobile / $MbaseWidth);    // mobile相
 }
 @function MpxTorem($px) {
     @return $px / $MFontSize * 1rem;
+}
+
+@mixin userSelect {
+    // 避免选中出现蓝色
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
 }
